@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Api manager</title>
+</head>
+<body>
+  <h1>File Upload</h1>
+  <form action="#" method="post" enctype="multipart/form-data" id="uploadForm">
+    <input type="file" name="file" id="fileInput">
+    <button type="submit">Upload File</button>
+  </form>
+  <h1>Download problems file</h1>
+  <a href="#" id="downloadLink">Download</a>
+
+  <script>
+    const API_URL = "http://localhost:6969";
+    console.log('API URL:', API_URL);
+
+    // Set the action attribute of the upload form dynamically
+    document.getElementById("uploadForm").action = `${API_URL}/file/upload`;
+
+    // Set the href attribute of the download link dynamically
+    document.getElementById("downloadLink").href = `${API_URL}/problem/file/download`;
+  </script>
+</body>
+</html>
