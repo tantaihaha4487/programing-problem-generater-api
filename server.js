@@ -94,8 +94,6 @@ app.post('/file/upload', upload.single('file'), (req, res) => {
     return res.status(400).json({ error: 'No file uploaded' });
   }
 
-  // Handle the uploaded file as needed (e.g., save to a specific location, process it, etc.)
-  // For demonstration purposes, we'll just log the file details.
   console.log('Uploaded file details:', uploadedFile);
 
   res.json({ message: 'File uploaded successfully' });
